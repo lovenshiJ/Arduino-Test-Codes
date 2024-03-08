@@ -1,0 +1,22 @@
+#include <Servo.h>
+
+Servo myServo;  // Create a servo object
+
+void setup() {
+  myServo.attach(9);  // Attach the servo to pin 9
+  rotateServo(180); // Rotate the servo approximately 180 degrees
+}
+
+void loop() {
+  // Empty loop, since we want the code to run only once
+}
+
+void rotateServo(int degrees) {
+  myServo.writeMicroseconds(1650); // Set the speed for full rotation in one direction
+  
+  // Wait for the servo to rotate approximately 180 degrees
+  delay(1330); // Adjust the delay as needed
+  
+  // Stop the servo
+  myServo.writeMicroseconds(1500); // Assuming 1500 is the stop speed for your continuous rotation servo
+}
