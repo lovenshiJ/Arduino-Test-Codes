@@ -1,0 +1,23 @@
+#include <Servo.h>
+
+Servo servo;  // Create a servo object
+
+void setup() {
+
+  // turn on servo motor
+servo.attach(9);
+
+// rotate clockwise full-speed
+servo.write(180);
+delay(845);
+
+
+
+// turn off servo motor
+servo.detach();
+}
+
+void loop() {
+  // Empty loop, since we want the code to run only once
+}
+
